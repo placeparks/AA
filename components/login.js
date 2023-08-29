@@ -3,7 +3,7 @@ import { useState } from "react"
 import { connectToSmartWallet } from "../lib/wallets"
 import styles from "../styles/Home.module.css"
 import { Blocks } from "react-loader-spinner"
-import { Connected } from "./connected"
+import { Connected } from "./Connected"
 
 export const Login = () => {
   const [username, setUsername] = useState("")

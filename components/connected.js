@@ -8,7 +8,7 @@ import {
     useTotalCirculatingSupply,
     useTransferNFT
   } from "@thirdweb-dev/react"
-  import { DEV_CAT_CONTRACT, THIRDWEB_API_KEY, chain } from "../lib/constants"
+  import { nftCollection, THIRDWEB_API_KEY, chain } from "../lib/constants"
   import styles from "../styles/Home.module.css"
   import { shortenIfAddress } from "../lib/addresses"
   import { Blocks } from "react-loader-spinner"
@@ -28,7 +28,7 @@ import {
   
   const ConnectedInner = ({ username }) => {
     const address = useAddress()
-    const { contract } = useContract(DEV_CAT_CONTRACT)
+    const { contract } = useContract(nftCollection)
     const { mutate: claim, isLoading: claimLoading } = useClaimNFT(contract)
     const { mutate: transfer, isLoading: transferLoading } = useTransferNFT(
       contract
@@ -134,7 +134,7 @@ import {
             </>
           ) : (
             <>
-              <p className={styles.description}>Claim your ethCC DevCat</p>
+              <p className={styles.description}>Claim your NFT</p>
               <button
                 className={styles.button}
                 onClick={() =>
@@ -153,7 +153,7 @@ import {
                       onError: err => {
                         let reason = err.reason || err
                         if (reason == "!Qty") {
-                          reason = "Already claimed max number of DevCats!"
+                          reason = "Already claimed max number!"
                         }
                         alert(reason)
                       }
