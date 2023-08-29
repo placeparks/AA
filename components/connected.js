@@ -83,7 +83,7 @@ import {
               <p style={{ color: "#999" }}>
                 view on{" "}
                 <a
-                  href={`https://testnets.opensea.io/assets/base-goerli/${DEV_CAT_CONTRACT.toLowerCase()}/${
+                  href={`https://testnets.opensea.io/assets/base-goerli/${nftCollection.toLowerCase()}/${
                     ownedNFTs[0].metadata.id
                   }`}
                   target="_blank"
@@ -181,10 +181,10 @@ import {
         <p className={styles.label} style={{ color: "#999", marginTop: "5px" }}>
           Contract:{" "}
           <a
-            href={`https://thirdweb.com/${chain.slug}/${DEV_CAT_CONTRACT}`}
+            href={`https://thirdweb.com/${chain.slug}/${nftCollection}`}
             target="_blank"
           >
-            {shortenIfAddress(DEV_CAT_CONTRACT)}
+            {shortenIfAddress(nftCollection)}
           </a>
         </p>
       </div>
