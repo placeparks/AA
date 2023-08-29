@@ -78,12 +78,12 @@ import {
               <ThirdwebNftMedia metadata={ownedNFTs[0].metadata} />
               <p>You own {ownedNFTs[0].quantityOwned}</p>
               <p className={styles.description} style={{ fontWeight: "bold" }}>
-                ethCC DevCat
+              Valarian Stormcrest
               </p>
               <p style={{ color: "#999" }}>
                 view on{" "}
                 <a
-                  href={`https://testnets.opensea.io/assets/base-goerli/${nftCollection.toLowerCase()}/${
+                  href={`https://testnets.opensea.io/assets/mumbai/${nftCollection.toLowerCase()}/${
                     ownedNFTs[0].metadata.id
                   }`}
                   target="_blank"
@@ -176,7 +176,7 @@ import {
     return (
       <div className={styles.column_center} style={{ marginBottom: "2rem" }}>
         <p style={{ color: "#999" }}>
-          <b>{totalClaimed?.toString() || "-"}</b> DevCats have been claimed
+          <b>{totalClaimed?.toString() || "-"}</b> Valarian Stormcrest have been claimed
         </p>
         <p className={styles.label} style={{ color: "#999", marginTop: "5px" }}>
           Contract:{" "}
