@@ -6,6 +6,9 @@ import { Blocks } from "react-loader-spinner"
 import { Connected } from "./Connected"
 import loadingLottie from "../assets/lottie/loading.json"
 import LottieLoader from "react-lottie-loader"
+import login from "../assets/lottie/login.json"
+
+
 export const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
@@ -55,11 +58,11 @@ export const Login = () => {
     </div>
   ) : (
     <>
-      <div className={styles.row_center} style={{ marginTop: "2rem" }}>
-        <a href="https://thirdweb.com">
-          <img src="thirdweb.svg" className={styles.logo} alt="logo" />
-        </a>
-        <h1 className={styles.title}>Unilogin</h1>
+      <div className={styles.row_center} style={{ marginTop: "2rem", marginBottom:"-90px" }}>
+      <LottieLoader
+    animationData={login}
+      />
+        <h1 className={styles.title} >Unilogin</h1>
       </div>
       <div className={styles.filler}>
         <input

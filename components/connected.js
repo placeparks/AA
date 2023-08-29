@@ -13,6 +13,8 @@ import {
   import { shortenIfAddress } from "../lib/addresses"
   import { Blocks } from "react-loader-spinner"
   import { useState } from "react"
+  import load from "../assets/lottie/load.json"
+  import LottieLoader from "react-lottie-loader"
   
   export const Connected = ({ username, signer }) => {
     return (
@@ -57,14 +59,9 @@ import {
         <div className={styles.filler}>
           {nftsLoading || claimLoading || transferLoading ? (
             <>
-              <Blocks
-                visible={true}
-                height="80"
-                width="80"
-                ariaLabel="blocks-loading"
-                wrapperStyle={{}}
-                wrapperClass="blocks-wrapper"
-              />
+               <LottieLoader
+    animationData={load}
+      />
               <p>
                 {nftsLoading
                   ? "Loading your account..."
