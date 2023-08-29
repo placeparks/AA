@@ -4,7 +4,8 @@ import { connectToSmartWallet } from "../lib/wallets"
 import styles from "../styles/Home.module.css"
 import { Blocks } from "react-loader-spinner"
 import { Connected } from "./Connected"
-
+import loadingLottie from "../assets/lottie/loading.json"
+import LottieLoader from "react-lottie-loader"
 export const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
@@ -36,13 +37,8 @@ export const Login = () => {
     </>
   ) : isLoading ? (
     <div className={styles.filler}>
-      <Blocks
-        visible={true}
-        height="80"
-        width="80"
-        ariaLabel="blocks-loading"
-        wrapperStyle={{}}
-        wrapperClass="blocks-wrapper"
+      <LottieLoader
+    animationData={loadingLottie}
       />
       <p className={styles.label} style={{ textAlign: "center" }}>
         {loadingStatus}
