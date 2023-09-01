@@ -62,11 +62,7 @@ export const Login = () => {
       <LottieLoader
     animationData={login}
       />
-<<<<<<< HEAD
         <h3 className={styles.title} >UniPass</h3>
-=======
-        <h1 className={styles.title}>UniPass</h1>
->>>>>>> 90da410a762f1b518af20b5f4edce31c6cd908e2
       </div>
       <div className={styles.filler}>
         <input
